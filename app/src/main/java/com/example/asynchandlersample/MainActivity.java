@@ -185,6 +185,7 @@ public class MainActivity extends AppCompatActivity {
             Log.e(DEBUG_TAG,"JSON解析失敗",ex);
         }
 
+
         String telop=cityName + "の天気";
         String desc ="現在は"+weather+"です。\n 緯度は" + latitude +"度で経度は"+ longitude+"です。";
 
@@ -193,6 +194,7 @@ public class MainActivity extends AppCompatActivity {
 
         tvWeatherTelop.setText(telop);
         tvWeatherDesc.setText(desc);
+        tvWeatherDesc.setText(desc);
     }
-
+//git練習
 }
