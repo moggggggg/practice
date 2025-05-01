@@ -65,6 +65,12 @@ public class MainActivity extends AppCompatActivity {
     @UiThread
     private void addMsg(String msg){
         TextView tvWeatherDesc=findViewById(R.id.tvWeatherDesc);
+        String msgNow=tvWeatherDesc.getText().toString();
+        if (!msgNow.equals("")){
+            msgNow+="\n";
+        }
+        msgNow+=msg;
+        tvWeatherDesc.setText(msgNow);
 
     }
 
@@ -185,6 +191,7 @@ public class MainActivity extends AppCompatActivity {
             Log.e(DEBUG_TAG,"JSON解析失敗",ex);
         }
 
+
         String telop=cityName + "の天気";
         String desc ="現在は"+weather+"です。\n 緯度は" + latitude +"度で経度は"+ longitude+"です。";
 
@@ -194,5 +201,5 @@ public class MainActivity extends AppCompatActivity {
         tvWeatherTelop.setText(telop);
         tvWeatherDesc.setText(desc);
     }
-
+//git練習
 }
