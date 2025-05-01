@@ -65,6 +65,12 @@ public class MainActivity extends AppCompatActivity {
     @UiThread
     private void addMsg(String msg){
         TextView tvWeatherDesc=findViewById(R.id.tvWeatherDesc);
+        String msgNow=tvWeatherDesc.getText().toString();
+        if (!msgNow.equals("")){
+            msgNow+="\n";
+        }
+        msgNow+=msg;
+        tvWeatherDesc.setText(msgNow);
 
     }
 
@@ -193,7 +199,6 @@ public class MainActivity extends AppCompatActivity {
         TextView tvWeatherDesc=findViewById(R.id.tvWeatherDesc);
 
         tvWeatherTelop.setText(telop);
-        tvWeatherDesc.setText(desc);
         tvWeatherDesc.setText(desc);
     }
 //git練習
